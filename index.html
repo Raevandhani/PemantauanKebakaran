@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hotspot Smart Reporter – Palembang</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <header>
+    <h1>Hotspot Smart Reporter<span class="mode" id="mode"></span></h1>
+    <p>Lapor dan pantau kebakaran lahan dan hutan di Palembang</p>
+  </header>
+
+  <nav role="tablist">
+    <button role="tab" data-tab="lapor" aria-selected="true">Buat laporan</button>
+    <button role="tab" data-tab="peta" aria-selected="false">Peta pemantauan</button>
+    <button role="tab" data-tab="admin" aria-selected="false">Petugas</button>
+  </nav>
+
+  <main>
+    <section id="lapor">
+      <div class="card">
+        <label for="kategori">Jenis kejadian</label>
+        <select id="kategori">
+          <option>Kebakaran lahan</option><option>Kebakaran hutan</option>
+          <option>Kebakaran permukiman</option><option>Asap tebal</option>
+        </select>
+        <label for="deskripsi">Deskripsi kejadian</label>
+        <textarea id="deskripsi" placeholder="Contoh: api membesar di lahan kosong dekat jalan raya, asap mengarah ke permukiman"></textarea>
+        <label for="foto">Foto kejadian</label>
+        <input id="foto" type="file" accept="image/*" capture="environment">
+        <label for="nama">Nama pelapor (boleh dikosongkan)</label>
+        <input id="nama" type="text" autocomplete="name">
+        <label>Lokasi kejadian</label>
+        <div class="row"><button class="btn alt" id="gps" type="button">Gunakan lokasi saya</button><span class="hint" id="lokasi">Belum dipilih. Klik peta untuk memilih manual.</span></div>
+        <div id="pick" style="margin-top:8px"></div>
+        <div class="row"><button class="btn" id="kirim" type="button">Kirim laporan</button></div>
+        <div id="msg" role="status"></div>
+      </div>
+    </section>
+
+    <section id="peta" hidden>
+      <div class="stats" id="stats"></div>
+      <div id="map"></div>
+      <p class="hint">Klik penanda untuk melihat detail laporan.</p>
+    </section>
+
+    <section id="admin" hidden>
+      <div class="card">
+        <h2 style="margin-top:0;font-size:1.125rem">Daftar laporan masuk</h2>
+
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>Waktu</th><th>Kejadian</th><th>Foto</th><th>Status</th></tr></thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+  
+</body>
+</html>
