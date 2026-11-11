@@ -16,10 +16,8 @@
 
   <header>
     <h1>Hotspot Smart Reporter<span class="mode" id="mode"></span></h1>
-    <p>Lapor dan pantau kebakaran lahan dan hutan di Palembang</p>
   </header>
 
-  <!-- UBAH: urutan tab ditukar, "Peta pemantauan" sekarang pertama dan menjadi tab aktif saat web dibuka -->
   <nav role="tablist">
     <button role="tab" data-tab="peta" aria-selected="true">Peta pemantauan</button>
     <button role="tab" data-tab="lapor" aria-selected="false">Buat laporan</button>
@@ -27,14 +25,13 @@
   </nav>
 
   <main>
-    <!-- UBAH: section "peta" dipindah ke atas dan atribut hidden dihapus, jadi langsung tampil -->
+
     <section id="peta">
       <div class="stats" id="stats"></div>
       <div id="map"></div>
       <p class="hint">Klik penanda untuk melihat detail laporan.</p>
     </section>
 
-    <!-- UBAH: section "lapor" sekarang diberi atribut hidden, baru tampil saat tab "Buat laporan" diklik -->
     <section id="lapor" hidden>
       <div class="card">
         <label for="kategori">Jenis kejadian</label>
@@ -53,6 +50,12 @@
         <div id="pick" style="margin-top:8px"></div>
         <div class="row"><button class="btn" id="kirim" type="button">Kirim laporan</button></div>
         <div id="msg" role="status"></div>
+      </div>
+    </section>
+
+    <section id="login" hiddeen>
+      <div>
+        
       </div>
     </section>
 
