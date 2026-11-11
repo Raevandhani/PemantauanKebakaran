@@ -1,4 +1,3 @@
-
 const STATUS = {baru:"Baru", ditangani:"Sedang ditangani", selesai:"Selesai"};
 const COLOR = {baru:"#c9302c", ditangani:"#d98e04", selesai:"#2e7d32"};
 
@@ -53,6 +52,7 @@ document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
     if (pin !== CONFIG.ADMIN_PIN) { if (pin !== null) alert("PIN salah."); return; }
     unlocked = true;
   }
+  
   document.querySelectorAll("nav button").forEach(x => x.setAttribute("aria-selected", x === b));
   ["lapor", "peta", "admin"].forEach(id => $(id).hidden = id !== tab);
   if (tab === "lapor") setTimeout(() => pickMap.invalidateSize(), 50);
@@ -81,6 +81,7 @@ $("gps").onclick = () => {
     {enableHighAccuracy:true, timeout:10000});
 };
 if (navigator.geolocation) $("gps").click();
+
 
 /* ===== Kirim laporan ===== */
 function show(text, type) { const m = $("msg"); m.textContent = text; m.className = type; }
@@ -148,3 +149,6 @@ async function renderAdmin() {
     try { await setStatus(s.dataset.id, s.value); } catch (e) { alert("Status gagal diubah: " + e.message); renderAdmin(); }
   });
 }
+
+
+renderMap();

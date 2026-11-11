@@ -19,14 +19,23 @@
     <p>Lapor dan pantau kebakaran lahan dan hutan di Palembang</p>
   </header>
 
+  <!-- UBAH: urutan tab ditukar, "Peta pemantauan" sekarang pertama dan menjadi tab aktif saat web dibuka -->
   <nav role="tablist">
-    <button role="tab" data-tab="lapor" aria-selected="true">Buat laporan</button>
-    <button role="tab" data-tab="peta" aria-selected="false">Peta pemantauan</button>
+    <button role="tab" data-tab="peta" aria-selected="true">Peta pemantauan</button>
+    <button role="tab" data-tab="lapor" aria-selected="false">Buat laporan</button>
     <button role="tab" data-tab="admin" aria-selected="false">Petugas</button>
   </nav>
 
   <main>
-    <section id="lapor">
+    <!-- UBAH: section "peta" dipindah ke atas dan atribut hidden dihapus, jadi langsung tampil -->
+    <section id="peta">
+      <div class="stats" id="stats"></div>
+      <div id="map"></div>
+      <p class="hint">Klik penanda untuk melihat detail laporan.</p>
+    </section>
+
+    <!-- UBAH: section "lapor" sekarang diberi atribut hidden, baru tampil saat tab "Buat laporan" diklik -->
+    <section id="lapor" hidden>
       <div class="card">
         <label for="kategori">Jenis kejadian</label>
         <select id="kategori">
@@ -47,12 +56,6 @@
       </div>
     </section>
 
-    <section id="peta" hidden>
-      <div class="stats" id="stats"></div>
-      <div id="map"></div>
-      <p class="hint">Klik penanda untuk melihat detail laporan.</p>
-    </section>
-
     <section id="admin" hidden>
       <div class="card">
         <h2 style="margin-top:0;font-size:1.125rem">Daftar laporan masuk</h2>
@@ -71,6 +74,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
   <script src="config.js"></script>
   <script src="app.js"></script>
-  
+
 </body>
 </html>
