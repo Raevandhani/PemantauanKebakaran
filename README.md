@@ -39,4 +39,10 @@ Project akhir mata kuliah Pemantauan dan Kota Cerdas, Kelompok 2. Prototipe ini 
 Kelompok 2, mata kuliah Pemantauan dan Kota Cerdas. 
 Dosen pengampu: Erick Dazki, S.Kom., M.Kom.
 
-Anggota:
+| No | Nama | NIM |
+| :-: | --- | --- |
+| 1 | Raevandhani Fattan P.S. | 2610101031 |
+| 2 | Gabriel Evan H.P | 2610101002 |
+| 3 | Richy Hero Himawan | 2610101029  |
+| 4 | M. Fakhri Sadewa | 2610101036  |
+| 5 | Moses Nathanael | 2610101027  |
