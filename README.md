@@ -17,7 +17,7 @@ Project akhir mata kuliah Pemantauan dan Kota Cerdas, Kelompok 2. Prototipe ini 
 | --- | --- |
 | Antarmuka | HTML, CSS, dan JavaScript biasa (tanpa framework dan tanpa build) |
 | Peta | [Leaflet](https://leafletjs.com/) dengan tile Esri |
-| Backend (opsional) | [Supabase](https://supabase.com/) (Postgres) |
+| Backend | [Supabase](https://supabase.com/) (Postgres) |
 | Hosting | Situs statis, misalnya Vercel, Netlify, atau GitHub Pages |
 
 ## Menjalankan secara lokal
