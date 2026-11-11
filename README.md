@@ -1,6 +1,6 @@
 # Hotspot Smart Reporter
 
-Prototipe sistem informasi berbasis web untuk pelaporan dan pemantauan kebakaran lahan dan hutan (karhutla) di Palembang. Warga dapat melaporkan kejadian lengkap dengan foto dan lokasi GPS, lalu laporan tampil di peta pemantauan dan dapat ditindaklanjuti oleh petugas.
+Prototipe sistem informasi berbasis web untuk pelaporan dan pemantauan kebakaran di Palembang. Warga dapat melaporkan kejadian lengkap dengan foto dan lokasi GPS, lalu laporan tampil di peta pemantauan dan dapat ditindaklanjuti oleh petugas.
 
 Project akhir mata kuliah Pemantauan dan Kota Cerdas, Kelompok 2. Prototipe ini mendukung tiga pilar kota cerdas: Smart Environment, Smart Living, dan Smart Governance.
 
