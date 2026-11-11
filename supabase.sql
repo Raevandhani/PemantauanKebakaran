@@ -1,4 +1,3 @@
--- Jalankan di Supabase: SQL Editor > New query > Run
 create table reports (
   id uuid primary key default gen_random_uuid(),
   created_at timestamptz default now(),
