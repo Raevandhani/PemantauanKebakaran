@@ -7,7 +7,6 @@ const fmt = d => new Date(d).toLocaleString("id-ID", {dateStyle:"medium", timeSt
 
 let sb = null;
 try { if (CONFIG.SUPABASE_URL && CONFIG.SUPABASE_ANON_KEY) sb = supabase.createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY); } catch (e) { console.error(e); }
-$("mode").textContent = sb ? "Terhubung ke database" : "Mode demo";
 
 /* ===== Penyimpanan ===== */
 let mem = null;
@@ -150,5 +149,6 @@ async function renderAdmin() {
   });
 }
 
-
+// UBAH: baris baru. Peta sekarang tampil pertama saat web dibuka,
+// jadi penanda laporan harus dimuat langsung tanpa menunggu tab diklik
 renderMap();
